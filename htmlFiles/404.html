@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>404</title>
+        <style>
+            html, body{
+                height: 100%;
+                background-color: #e3e3e3;
+            }
+            h1, button{
+                text-align: center;
+            }
+            #dokme{
+                position: relative;
+                left: 45%;                
+                padding: 8px;
+                width: 10%;
+                cursor: pointer; 
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </header>
+    <body>
+        <h1>Your requested directory doesn't exist!</h1>
+        <form action="/login" method="post">
+            <a href="/login"><button id="dokme" type="button"> Back to Login page</button></a>
+        </form>
+    </body>
+</html>

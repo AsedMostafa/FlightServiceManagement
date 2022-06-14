@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Home</title>
+        <style>
+            a{
+                text-decoration: none;
+            }
+            button{
+                cursor: pointer;
+            }
+        </style>
+    </header>
+    <body>
+        <div class="topBar">
+            <h3>Wallet amonunt: <% cout << context["walletAmount"]; %></h3>
+                <form name="logOutForm" method="post">
+                <button id="Dokme" type="submit">Logout</button>
+                </form>
+                <form name="chargeForm" action="user" method="get">
+                    <input type="number" name="chargeAmount" placeholder="amount">
+                    <button id="Dokme" type="submit">charge wallet</button>
+                </form>
+        </div>
+        <div>
+            <h3>
+                Flights:
+            </h3><br>
+            <table>
+            <tr>
+            <th>Airline</th><th>origin</th><th>destination</th><th>departure date</th><th>departure time</th><th> </th>
+            </tr>  
+            <% 
+            cout << context["printFlights"];
+            %>
+            </table>
+            <h3>
+                Tickets:
+            </h3><br>
+            <table>
+                <tr>
+                <%
+                cout << context["tickets"];
+                %>
+             </tr>
+            </table>
+        </div>
+    </body>
+</html>
